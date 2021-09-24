@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//render: hàm của react giúp tạo UI 
+//có 2 tham số: nội dung UI, thẻ sẽ được thêm nội dung
+//<App /> thẻ được dev tạo ra, component
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
 
