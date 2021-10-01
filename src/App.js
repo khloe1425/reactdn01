@@ -5,13 +5,20 @@ import ClassComponent from './Components/ClassComponent';
 import HomeComponent from './Components/BaiTapComponent/HomeComponent';
 import DataBinding from './DataBinding/DataBinding';
 import StyleComponent from './StyleComponent/StyleComponent';
+import HandleEvent from './HandleEvent/HandleEvent';
+import StateDemo from './StateDemo/StateDemo';
+import ChangeFontSize from './StateDemo/ChangeFontSize';
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <StyleComponent/>
-      <p className="text fontText">AppComponent</p>
+      <ChangeFontSize/>
+      
+      {/* <StateDemo/> */}
+      {/* <HandleEvent/> */}
+      {/* <StyleComponent/>
+      <p className="text fontText">AppComponent</p> */}
       {/* <DataBinding/> */}
       
       {/* <HomeComponent/> */}
