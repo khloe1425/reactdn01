@@ -8,12 +8,14 @@ import StyleComponent from './StyleComponent/StyleComponent';
 import HandleEvent from './HandleEvent/HandleEvent';
 import StateDemo from './StateDemo/StateDemo';
 import ChangeFontSize from './StateDemo/ChangeFontSize';
+import BaiTapChonXe from './BaiTapChonXe/BaiTapChonXe';
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <ChangeFontSize/>
+      <BaiTapChonXe/>
+      {/* <ChangeFontSize/> */}
       
       {/* <StateDemo/> */}
       {/* <HandleEvent/> */}
