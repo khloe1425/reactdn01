@@ -9,12 +9,16 @@ import HandleEvent from './HandleEvent/HandleEvent';
 import StateDemo from './StateDemo/StateDemo';
 import ChangeFontSize from './StateDemo/ChangeFontSize';
 import BaiTapChonXe from './BaiTapChonXe/BaiTapChonXe';
+import RenderWithArray from './RenderWithArray/RenderWithArray';
+import HomePage from './Props/HomePage';
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <BaiTapChonXe/>
+      <HomePage/>
+      {/* <RenderWithArray/> */}
+      {/* <BaiTapChonXe/> */}
       {/* <ChangeFontSize/> */}
       
       {/* <StateDemo/> */}
