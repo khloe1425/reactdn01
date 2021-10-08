@@ -11,12 +11,16 @@ import ChangeFontSize from './StateDemo/ChangeFontSize';
 import BaiTapChonXe from './BaiTapChonXe/BaiTapChonXe';
 import RenderWithArray from './RenderWithArray/RenderWithArray';
 import HomePage from './Props/HomePage';
+import BTXemChiTiet from './Props/BTXemChiTiet/BTXemChiTiet';
+import CarShop from './Props/CarShop/CarShop';
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <HomePage/>
+      <CarShop/>
+      {/* <BTXemChiTiet/> */}
+      {/* <HomePage/> */}
       {/* <RenderWithArray/> */}
       {/* <BaiTapChonXe/> */}
       {/* <ChangeFontSize/> */}
