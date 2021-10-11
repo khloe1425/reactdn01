@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Cart from './Cart';
+import ProductList from './ProductList';
 
 class ExerciseCart extends Component {
     arrPhone = [
@@ -15,39 +17,9 @@ class ExerciseCart extends Component {
                         <p>Giỏ hàng (0)</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-4">
-                        <div className="card">
-                            <img src="./img/vsphone.jpg" className="card-img-top" alt="..." />
-                            <div className="card-body">
-                                <h5 className="card-title">VinSmart Live</h5>
-                                <p className="card-text">giaBan</p>
-                                <a href="#" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Thêm Giỏ Hàng</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">
-                                ...
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" className="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ProductList mangSP={this.arrPhone}/>
+                <Cart/>
+               
 
 
             </div>
