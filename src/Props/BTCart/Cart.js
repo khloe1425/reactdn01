@@ -1,7 +1,44 @@
 import React, { Component } from 'react'
 
 export default class Cart extends Component {
+
+    renderGioHang = () => {
+        let {gioHang,xoaGioHang,tangGiamSL} = this.props;
+        return gioHang.map((phone, index) => {
+            return <tr key={index}>
+                <td>{phone.maSP}</td>
+                <td>{phone.tenSP}</td>
+                <td style={{ width: "100px" }}>
+                    <img className="img-fluid" src={phone.hinhAnh} alt="" />
+                </td>
+                <td>
+                    <button className="btn btn-info" onClick={() => {
+                        tangGiamSL(phone.maSP,1)
+                    }} >+</button>
+                    <span>{phone.soLuong}</span>
+                    <button className="btn btn-info" onClick={() => {
+                        tangGiamSL(phone.maSP,-1)
+                    }}>-</button>
+                </td>
+                <td>
+                   {phone.giaBan.toLocaleString()}
+                </td>
+                <td>
+                    {/* Những giá trị có thể tính toán từ giá trị có sẵn thì không cần lưu trữ */}
+                    {(phone.soLuong*phone.giaBan).toLocaleString()}
+                </td>
+                <td>
+                    <button onClick={() => {
+                        xoaGioHang(phone);
+                    }} className="btn btn-danger">Xóa</button>
+                </td>
+            </tr>
+        })
+    }
+
+
     render() {
+        console.log(this.props.gioHang)
         return (
             <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-lg">
@@ -25,24 +62,7 @@ export default class Cart extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VinSmart Live</td>
-                                        <td style={{ width: "100px" }}>
-                                            <img className="img-fluid" src="./img/vsphone.jpg" alt="" />
-                                        </td>
-                                        <td>
-                                            <button className="btn btn-info">+</button>
-                                            <span>1</span>
-                                            <button className="btn btn-info">-</button>
-                                        </td>
-                                        <td>
-                                            5700000
-                                        </td>
-                                        <td>
-                                            5700000
-                                        </td>
-                                    </tr>
+                                    {this.renderGioHang()}
                                 </tbody>
                             </table>
 

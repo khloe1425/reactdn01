@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class ProductItem extends Component {
     render() {
-        let {sp} = this.props;
+        let {sp,themGioHang} = this.props;
         return (
             <div className="col-4">
                 <div className="card">
@@ -10,7 +10,9 @@ export default class ProductItem extends Component {
                     <div className="card-body">
                         <h5 className="card-title">{sp.tenSP}</h5>
                         <p className="card-text">{sp.giaBan.toLocaleString()}</p>
-                        <a divhref="#" className="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Thêm Giỏ Hàng</a>
+                        <a onClick={() => {
+                            themGioHang(sp);
+                        }} className="btn btn-danger" data-toggle="modal" data-target="#exampleModal" >Thêm Giỏ Hàng</a>
                     </div>
                 </div>
 

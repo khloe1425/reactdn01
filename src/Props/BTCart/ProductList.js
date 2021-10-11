@@ -4,8 +4,9 @@ import ProductItem from './ProductItem'
 export default class ProductList extends Component {
 
     renderProductItem = () => {
-        return this.props.mangSP.map((phone,index) => {
-            return <ProductItem sp={phone} key={index}/>;
+        let {mangSP,themGioHang} = this.props;
+        return mangSP.map((phone,index) => {
+            return <ProductItem themGioHang={themGioHang} sp={phone} key={index}/>;
         })
     }
 
