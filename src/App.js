@@ -13,12 +13,14 @@ import RenderWithArray from './RenderWithArray/RenderWithArray';
 import HomePage from './Props/HomePage';
 import BTXemChiTiet from './Props/BTXemChiTiet/BTXemChiTiet';
 import CarShop from './Props/CarShop/CarShop';
+import ExerciseCart from './Props/BTCart/ExerciseCart';
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <CarShop/>
+      <ExerciseCart/>
+      {/* <CarShop/> */}
       {/* <BTXemChiTiet/> */}
       {/* <HomePage/> */}
       {/* <RenderWithArray/> */}
