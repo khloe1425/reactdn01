@@ -14,27 +14,37 @@ import HomePage from './Props/HomePage';
 import BTXemChiTiet from './Props/BTXemChiTiet/BTXemChiTiet';
 import CarShop from './Props/CarShop/CarShop';
 import ExerciseCart from './Props/BTCart/ExerciseCart';
+import BTGioHang from './demoRedux/BTGioHang/BTGioHang';
+
+//redux
+import {store} from './redux/configStore';
+import {Provider} from 'react-redux';
+
 
 // JSX
 function App() {
   return (
     <div className="App">
-      <ExerciseCart/>
+      <Provider store={store}>
+        <BTGioHang />        
+      </Provider>
+
+      {/* <ExerciseCart/> */}
       {/* <CarShop/> */}
       {/* <BTXemChiTiet/> */}
       {/* <HomePage/> */}
       {/* <RenderWithArray/> */}
       {/* <BaiTapChonXe/> */}
       {/* <ChangeFontSize/> */}
-      
+
       {/* <StateDemo/> */}
       {/* <HandleEvent/> */}
       {/* <StyleComponent/>
       <p className="text fontText">AppComponent</p> */}
       {/* <DataBinding/> */}
-      
+
       {/* <HomeComponent/> */}
-      
+
       {/* <h1>Hello React</h1> */}
       {/* sử dụng component
       pascal case
@@ -44,7 +54,7 @@ function App() {
       <FunctionComponent></FunctionComponent>
        <ClassComponent/> */}
 
-       
+
     </div>
 
 
